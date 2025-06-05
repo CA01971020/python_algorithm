@@ -1,0 +1,62 @@
+# 問題: 最も深いノードを探せ
+
+ある**二分木（binary tree）**があり、その構造はノードごとに以下の形式で与えられます
+
+```
+class Node:
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+```
+
+この木構造において、最も深いノードの値を出力してください。
+深さは、根ノードを深さ0としたとき、葉ノードまでの距離で定義されます。
+
+## 入力
+木構造のルートノード root が与えられます。
+
+## 出力
+最も深いノードの値（複数ある場合はそのうちどれか1つを出力）
+
+例
+```
+# 以下のような二分木を考える
+#         A
+#        / \
+#       B   C
+#      /
+#     D
+
+# Dが最も深いノードなので、出力は "D"
+```
+
+## 制約
+- ノード数は最大1000個
+- ノードの値は一意な英字（A〜Zなど）
+
+## ヒント
+- 再帰的に深さを記録しながら探索する
+- BFS（幅優先探索）で各ノードの深さを追跡してもOK
+
+## テンプレート
+```ts
+class Node:
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+
+def find_deepest_node(root: Node) -> str:
+    # ここに実装を書く
+    pass
+
+# テスト用の木構造
+root = Node("A",
+            Node("B",
+                 Node("D")),
+            Node("C"))
+
+print(find_deepest_node(root))  # 出力例: "D"
+
+```
