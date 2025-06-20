@@ -40,7 +40,7 @@ class Node:
 - BFS（幅優先探索）で各ノードの深さを追跡してもOK
 
 ## テンプレート
-```ts
+```py
 class Node:
     def __init__(self, value, left=None, right=None):
         self.value = value
