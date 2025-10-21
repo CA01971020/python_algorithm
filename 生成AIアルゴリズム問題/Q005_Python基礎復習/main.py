@@ -18,3 +18,10 @@ print(count)
 print("----------")
 
 # 中級：文字列反転
+
+a = "python"
+
+def reverse_string(text):
+    return text[::-1]
+
+print(reverse_string(a))
